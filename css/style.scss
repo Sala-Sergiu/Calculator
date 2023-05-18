@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+
+  &__box {
+    border: 4px solid #000;
+    &__screen {
+      display: flex;
+      justify-content: right;
+      padding: 4px 0;
+    }
+    &__pad {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 2.5px;
+    }
+    &__numbers {
+      padding: 14px 2.5px;
+      &__span-2 {
+        grid-area: 5/1 / auto/span 2;
+      }
+      &__span-3 {
+        grid-area: 1/1 / auto/span 3;
+      }
+    }
+  }
+}
+
+// .span-2 {
+//   grid-area: 4/1/auto/span 2;
+// }
